@@ -10,11 +10,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/caterpillhub/sample-java-app.git'
-            }
-        }
         stage('Build with Maven') {
             steps {
                 sh 'mvn clean package'
